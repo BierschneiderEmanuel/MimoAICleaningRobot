@@ -33,7 +33,7 @@ Ensures workspaces remain clean and organized, reducing risks and promoting a he
 This project exemplifies the integration of AI, robotics, and user-centric design to deliver tangible operational benefits and a showcase for next-generation automation.
 This code is for a elephant robotics AI robot with 6 degrees of freedom that utilizes speech recognition combined with a multimodal transformer-based large language model, called bakllava.
 <br>
-<strong>Feature List: Elephant Robotics AI Robot (6-DOF) with Multimodal AI and Speech Control</strong><br>
+<h2>Feature List: Elephant Robotics AI Robot (6-DOF) with Multimodal AI and Speech Control</h2><br>
 <br>
 <strong>6 Degrees of Freedom Robotic Arm</strong><br>
 Enables complex manipulation and precise movement in 3D space.<br>
@@ -67,8 +67,7 @@ Uses Bakllava model to analyze the scene and decide if cleanup is needed.<br>
 If mess is detected, robot locates target object using YOLO.<br>
 Calculates 3D coordinates and distance to object for precise pickup.<br>
 Controls gripper state (open/close) and arm movement for object manipulation.<br>
-Utilizes proprietary TCP/IP Socket Communication<br>
-<a href="https://github.com/BierschneiderEmanuel/MyCobot280BSDSocketInterface.git">MyCobot280 BSD Socket Interface Repository</a>
+Utilizes proprietary TCP/IP Socket Communication: <a href="https://github.com/BierschneiderEmanuel/MyCobot280BSDSocketInterface.git">MyCobot280 BSD Socket Interface Repository</a><br>
 <br>
 Robust, low-level communication with the robot hardware for real-time control.<br>
 Supports sending/receiving joint angles, coordinates, and gripper commands.<br>
