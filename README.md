@@ -1,47 +1,48 @@
-# MimoAICleaningRobot
+<h1>Autonomous AI-Powered Cleanup RobotMimoAICleaningRobot</h1>
 An AI-powered Elephant Robotics myCobot 280 NVIDIA Jetson Nano 6-DOF robotic system that uses speech recognition, multimodal vision-language models, and real-time object detection to autonomously detect, assess, and clean up messy environments through intelligent human-robot interaction.
 <br>
-<strong>Project Overview: Autonomous AI-Powered Cleanup Robot</strong><br>
+<h2>Autonomous AI-Powered Cleanup Robot</h2>
+<strong>Project Overview:</strong><br>
 This project delivers an advanced, AI-driven robotic solution for workspace cleanliness and human-robot interaction. The system leverages a 6-axis Elephant Robotics arm, state-of-the-art computer vision, and natural language processing to autonomously detect, assess, and respond to environmental messiness.<br>
 <br>
-Key Capabilities<br>
-Human Interaction:<br>
+<h2>Key Capabilities</h2><br>
+<strong>Human Interaction:</strong><br>
 The robot detects human presence and responds to spoken commands, enabling intuitive, hands-free operation.<br>
 <br>
-Intelligent Scene Understanding:<br>
+<strong>Intelligent Scene Understanding:</strong><br>
 Using a multimodal transformer-based AI model, the robot analyzes visual input and determines if the environment is messy, ensuring context-aware decision-making.<br>
 <br>
-Targeted Object Detection:<br>
+Targeted Object Detection:</strong><br>
 When cleanup is required, the system identifies and locates specific objects (e.g., utensils, food items) using advanced object detection algorithms.<br>
 <br>
-Autonomous Manipulation:<br>
+<strong>Autonomous Manipulation:</strong><br>
 The robot calculates precise distances and coordinates, enabling it to pick up and move objects efficiently and safely.<br>
 <br>
-Seamless Integration:<br>
+Seamless Integration:</strong><br>
 All components communicate over a robust TCP/IP protocol, ensuring reliable real-time control and feedback.<br>
 <br>
-Business Value<br>
-Enhanced Productivity:<br>
+<h2>Business Value</h2></strong><br>
+<strong>Enhanced Productivity:</strong><br>
 Automates routine cleanup tasks, allowing human staff to focus on higher-value activities.<br>
 <br>
 Improved Safety and Hygiene:<br>
 Ensures workspaces remain clean and organized, reducing risks and promoting a healthier environment.<br>
 <br>
-Cutting-Edge Innovation:<br>
+Cutting-Edge Innovation:</strong><br>
 Demonstrates leadership in AI, robotics, and human-machine collaboration, supporting digital transformation initiatives.<br>
 <br>
 This project exemplifies the integration of AI, robotics, and user-centric design to deliver tangible operational benefits and a showcase for next-generation automation.
 This code is for a elephant robotics ai robot with 6 degrees of freedom that utilizes speech recognition combined with a multimodal transformer-based large language model. called bakllava. The robot calculates the distance to a target object that shall be cleaned up in case a human person is detected that says is it messy to trigger the cleanup. to detect if it is messy the baklava model is used. to locate the object to be cleaned up yolo v8 is used. the robot is connected via a proprietry tcp/ip socket library. Do write a sophisticated feature list in bullet points<br>
 <br>
-Feature List: Elephant Robotics AI Robot (6-DOF) with Multimodal AI and Speech Control<br>
+<strong>Feature List: Elephant Robotics AI Robot (6-DOF) with Multimodal AI and Speech Control</strong><br>
 <br>
-6 Degrees of Freedom Robotic Arm<br>
+<strong>6 Degrees of Freedom Robotic Arm</strong><br>
 Enables complex manipulation and precise movement in 3D space.<br>
 <br>
-Speech Recognition Integration<br>
+<strong>Speech Recognition Integration</strong><br>
 Uses speech_recognition and pyttsx3 for natural language interaction and voice feedback.<br>
 <br>
-Multimodal Transformer-based LLM (Bakllava)<br>
+<strong>Multimodal Transformer-based LLM (Bakllava)</strong><br>
 <br>
 Accepts both image and text input for context-aware reasoning.<br>
 Determines scene cleanliness or messiness from camera images using advanced vision-language understanding.<br>
@@ -49,7 +50,7 @@ YOLOv8 Object Detection<br>
 <br>
 Detects and localizes specific objects (e.g., fork, banana) in real-time.<br>
 Calculates object position and distance for robotic manipulation.<br>
-Face Mesh Detection (MediaPipe)<br>
+Face Mesh Detection (MediaPipe)</strong><br>
 <br>
 Detects human presence and facial landmarks.<br>
 Calculates distance to human face for safety and interaction context.<br>
@@ -57,7 +58,7 @@ Dynamic Task Triggering<br>
 <br>
 Initiates cleanup sequence when a human is detected and the phrase &quot;is it messy&quot; is spoken.<br>
 Uses Bakllava model to analyze the scene and decide if cleanup is needed.<br>
-Automated Cleanup Workflow<br>
+Automated Cleanup Workflow</strong><br>
 <br>
 If mess is detected, robot locates target object using YOLOv8.<br>
 Calculates 3D coordinates and distance to object for precise pickup.<br>
@@ -82,7 +83,7 @@ Real-time Visual Feedback<br>
 <br>
 Displays camera feed with overlays for detected faces, objects, and landmarks.<br>
 Annotates images with detection results and distances.<br>
-Logging and Response Tracking<br>
+Logging and Response Tracking</strong><br>
 <br>
 Logs AI model responses and robot actions for debugging and analysis.<br>
 This system enables a highly interactive, intelligent, and autonomous robot capable of understanding and acting on complex multimodal commands in real-world environments.<br>
@@ -90,16 +91,16 @@ This system enables a highly interactive, intelligent, and autonomous robot capa
 <br>
 <br>
 <br>
-Initialization and Setup<br>
+<h2>Initialization and Setup</h2><br>
 <br>
-Imports a wide range of libraries for image processing (cv2, PIL), speech recognition (speech_recognition, pyttsx3), networking (socket), AI inference (ultralytics.YOLO, custom Bakllava LLM), and hardware control.<br>
+Imports a wide range of libraries for image processing (cv2, PIL), speech recognition (speech_recognition, pyttsx3), networking (socket), AI inference (ultralytics.YOLO, Bakllava LLM), and custom hardware control.<br>
 Sets up camera and image resolution constants for different AI models (Bakllava, YOLO, ROS).<br>
 Initializes the robot&rsquo;s TCP/IP socket connection via a custom MycobotServer class for sending/receiving joint angles, coordinates, and gripper commands.<br>
-Vision Modules<br>
+<h1>Vision Modules</h1><br>
 <br>
-YOLOv8 Object Detection:<br>
+<strong></stronn></strongn>YOLOv8 Object Detection:</strong><br>
 The YoloInferencer class loads a YOLOv8 model and provides a predict method to detect objects (e.g., fork, banana) in camera frames, returning bounding boxes and confidence scores.<br>
-Face Mesh Detection:<br>
+<strong>Face Mesh Detection:</strong><br>
 The FaceMeshDetector class uses MediaPipe to detect facial landmarks, enabling calculation of the distance to a human face using pixel geometry and known anthropometric distances (e.g., interpupillary distance).<br>
 Speech and Multimodal AI<br>
 <br>
@@ -120,14 +121,14 @@ Provides real-time visual feedback via OpenCV windows, overlaying detection resu
 Uses text-to-speech to inform the user of actions and AI decisions.<br>
 Logs AI responses and robot actions for traceability.<br>
 Technical Highlights<br>
-Multimodal Reasoning:<br>
+<strong>Multimodal Reasoning:</strong><br>
 Combines visual (YOLO, FaceMesh) and language (Bakllava LLM) AI for context-aware decision-making.<br>
-Real-Time Control:<br>
+<strong>Real-Time Control:</strong><br>
 Uses a proprietary TCP/IP protocol for low-latency robot actuation.<br>
-Adaptive Feedback:<br>
+<strong>Adaptive Feedback:</strong><br>
 Continuously refines robot movement based on visual feedback and error correction.<br>
-Extensible Design:<br>
+<strong>Extensible Design:</strong><br>
 Modular classes for detection, inference, and robot control allow for easy upgrades or task changes.<br>
-Summary:<br>
+<strong>Summary:</strong><br>
 This code enables a 6-DOF robot to autonomously detect human presence, understand spoken commands, assess environmental cleanliness using a multimodal LLM, locate objects with YOLOv8, and perform cleanup actions&mdash;all with real-time feedback and robust error handling.<br>
 <br>
