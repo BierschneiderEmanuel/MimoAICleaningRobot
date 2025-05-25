@@ -92,7 +92,6 @@ Annotates images with detection results and distances.<br>
 Logs AI model responses and robot actions for debugging and analysis.<br>
 This system enables a highly interactive, intelligent, and autonomous robot capable of understanding and acting on complex multimodal commands in real-world environments.<br>
 <br>
-<br>
 <h1>Initialization and Setup</h1><br>
 <br>
 Imports a wide range of libraries for image processing (cv2, PIL), speech recognition (speech_recognition, pyttsx3), networking (socket), AI inference (ultralytics.YOLO, Bakllava LLM), and custom hardware control.<br>
