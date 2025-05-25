@@ -19,7 +19,7 @@ When cleanup is required, the system identifies and locates specific objects (e.
 The robot calculates precise distances and coordinates, enabling it to pick up and move objects efficiently and safely.<br>
 <br>
 <strong>Seamless Integration:</strong><br>
-All components communicate over a robust TCP/IP protocol, ensuring reliable real-time control and feedback of the robots ROS2 MoveIt Inverse Kinematic Solver.<br>
+All components communicate over a robust TCP/IP protocol, ensuring reliable real-time control and feedback of the robots ROS2 MoveIt Inverse Kinematic Solver TRAC_IKKinematicsPlugin.<br>
 <br>
 <h2>Business Value</h2></strong><br>
 <strong>Enhanced Productivity:</strong><br>
