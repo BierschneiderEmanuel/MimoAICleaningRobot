@@ -1,7 +1,7 @@
 # MimoAICleaningRobot
-An AI-powered 6-DOF robotic system that uses speech recognition, multimodal vision-language models, and real-time object detection to autonomously detect, assess, and clean up messy environments through intelligent human-robot interaction.
+An AI-powered Elephant Robotics myCobot 280 NVIDIA Jetson Nano 6-DOF robotic system that uses speech recognition, multimodal vision-language models, and real-time object detection to autonomously detect, assess, and clean up messy environments through intelligent human-robot interaction.
 <br>
-Project Overview: Autonomous AI-Powered Cleanup Robot<br>
+<strong>Project Overview: Autonomous AI-Powered Cleanup Robot</strong><br>
 This project delivers an advanced, AI-driven robotic solution for workspace cleanliness and human-robot interaction. The system leverages a 6-axis Elephant Robotics arm, state-of-the-art computer vision, and natural language processing to autonomously detect, assess, and respond to environmental messiness.<br>
 <br>
 Key Capabilities<br>
