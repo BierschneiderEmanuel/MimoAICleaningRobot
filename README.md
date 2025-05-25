@@ -13,13 +13,13 @@ The robot detects human presence and responds to spoken commands, enabling intui
 Using a multimodal transformer-based AI model, the robot analyzes visual input and determines if the environment is messy, ensuring context-aware decision-making.<br>
 <br>
 <strong>Targeted Object Detection:</strong><br>
-When cleanup is required, the system identifies and locates specific objects (e.g., utensils, food items) using advanced object detection algorithms.<br>
+When cleanup is required, the system identifies and locates specific objects e.g., utensils (fork), food items (banana) using advanced object detection algorithms.<br>
 <br>
 <strong>Autonomous Manipulation:</strong><br>
 The robot calculates precise distances and coordinates, enabling it to pick up and move objects efficiently and safely.<br>
 <br>
 <strong>Seamless Integration:</strong><br>
-All components communicate over a robust TCP/IP protocol, ensuring reliable real-time control and feedback.<br>
+All components communicate over a robust TCP/IP protocol, ensuring reliable real-time control and feedback of the robots ROS2 MoveIt Inverse Kinematic Solver.<br>
 <br>
 <h2>Business Value</h2></strong><br>
 <strong>Enhanced Productivity:</strong><br>
@@ -31,21 +31,22 @@ Ensures workspaces remain clean and organized, reducing risks and promoting a he
 <strong>Cutting-Edge Innovation:</strong><br>
 <br>
 This project exemplifies the integration of AI, robotics, and user-centric design to deliver tangible operational benefits and a showcase for next-generation automation.
-This code is for a elephant robotics ai robot with 6 degrees of freedom that utilizes speech recognition combined with a multimodal transformer-based large language model. called bakllava. The robot calculates the distance to a target object that shall be cleaned up in case a human person is detected that says is it messy to trigger the cleanup. to detect if it is messy the baklava model is used. to locate the object to be cleaned up yolo v8 is used. the robot is connected via a proprietry tcp/ip socket library. Do write a sophisticated feature list in bullet points<br>
+This code is for a elephant robotics AI robot with 6 degrees of freedom that utilizes speech recognition combined with a multimodal transformer-based large language model, called bakllava.
 <br>
 <strong>Feature List: Elephant Robotics AI Robot (6-DOF) with Multimodal AI and Speech Control</strong><br>
 <br>
 <strong>6 Degrees of Freedom Robotic Arm</strong><br>
 Enables complex manipulation and precise movement in 3D space.<br>
+Utilizes the ROS2 MoveIt motion planning framework with collision detection and and avoidance visualized in RViz.<br>
 <br>
 <strong>Speech Recognition Integration</strong><br>
 Uses speech_recognition and pyttsx3 for natural language interaction and voice feedback.<br>
 <br>
 <strong>Multimodal Transformer-based LLM (Bakllava)</strong><br>
 <br>
-Accepts both image and text input for context-aware reasoning.<br>
+Accepts both image input for context-aware reasoning.<br>
 Determines scene cleanliness or messiness from camera images using advanced vision-language understanding.<br>
-YOLOv8 Object Detection<br>
+<strong>YOLOv8 Object Detection)</strong><br>
 <br>
 Detects and localizes specific objects (e.g., fork, banana) in real-time.<br>
 Calculates object position and distance for robotic manipulation.<br>
@@ -54,7 +55,8 @@ Calculates object position and distance for robotic manipulation.<br>
 <br>
 Detects human presence and facial landmarks.<br>
 Calculates distance to human face for safety and interaction context.<br>
-Dynamic Task Triggering<br>
+<br>
+<strong>Dynamic Task Triggering</strong><br>
 <br>
 Initiates cleanup sequence when a human is detected and the phrase &quot;is it messy&quot; is spoken.<br>
 Uses Bakllava model to analyze the scene and decide if cleanup is needed.<br>
@@ -64,11 +66,13 @@ Uses Bakllava model to analyze the scene and decide if cleanup is needed.<br>
 If mess is detected, robot locates target object using YOLOv8.<br>
 Calculates 3D coordinates and distance to object for precise pickup.<br>
 Controls gripper state (open/close) and arm movement for object manipulation.<br>
-Proprietary TCP/IP Socket Communication<br>
+Utilizes proprietary TCP/IP Socket Communication<br>
+<a href="https://github.com/BierschneiderEmanuel/MyCobot280BSDSocketInterface.git">MyCobot280 BSD Socket Interface Repository</a>
 <br>
 Robust, low-level communication with the robot hardware for real-time control.<br>
 Supports sending/receiving joint angles, coordinates, and gripper commands.<br>
-Camera Calibration and Image Preprocessing<br>
+<br>
+<strong>Camera Calibration and Image Preprocessing</strong>strong><br>
 <br>
 Supports multiple resolutions and cropping for optimal AI inference.<br>
 Converts coordinates between camera, YOLO, and robot coordinate systems.<br>
@@ -77,7 +81,8 @@ Converts coordinates between camera, YOLO, and robot coordinate systems.<br>
 <br>
 Handles connection errors, movement limits, and synchronization issues.<br>
 Maintains state flags for asynchronous actions and task sequencing.<br>
-Extensible Modular Design<br>
+<br>
+<strong>Extensible Modular Desig</strong><br>
 <br>
 Clear separation of detection, inference, and robot control logic.<br>
 Easily adaptable for new tasks, models, or hardware.<br>
