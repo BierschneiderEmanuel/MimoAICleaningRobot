@@ -13,7 +13,7 @@ The robot detects human presence and responds to spoken commands, enabling intui
 Using a multimodal transformer-based AI model, the robot analyzes visual input and determines if the environment is messy, ensuring context-aware decision-making.<br>
 <br>
 <strong>Targeted Object Detection:</strong><br>
-When cleanup is required, the system identifies and locates specific objects e.g., utensils (fork), food items (banana) using advanced object detection algorithms.<br>
+When cleanup is required, the system identifies and locates specific objects (e.g., utensils, food items) using advanced object detection algorithms.<br>
 <br>
 <strong>Autonomous Manipulation:</strong><br>
 The robot calculates precise distances and coordinates, enabling it to pick up and move objects efficiently and safely.<br>
@@ -46,7 +46,8 @@ Uses speech_recognition and pyttsx3 for natural language interaction and voice f
 <br>
 Accepts both image input for context-aware reasoning.<br>
 Determines scene cleanliness or messiness from camera images using advanced vision-language understanding.<br>
-<strong>YOLOv8 Object Detection)</strong><br>
+<br>
+<strong>YOLO (Object Detection)</strong><br>
 <br>
 Detects and localizes specific objects (e.g., fork, banana) in real-time.<br>
 Calculates object position and distance for robotic manipulation.<br>
@@ -63,7 +64,7 @@ Uses Bakllava model to analyze the scene and decide if cleanup is needed.<br>
 <br>
 <strong>Automated Cleanup Workflow</strong><br>
 <br>
-If mess is detected, robot locates target object using YOLOv8.<br>
+If mess is detected, robot locates target object using YOLO.<br>
 Calculates 3D coordinates and distance to object for precise pickup.<br>
 Controls gripper state (open/close) and arm movement for object manipulation.<br>
 Utilizes proprietary TCP/IP Socket Communication<br>
@@ -72,7 +73,7 @@ Utilizes proprietary TCP/IP Socket Communication<br>
 Robust, low-level communication with the robot hardware for real-time control.<br>
 Supports sending/receiving joint angles, coordinates, and gripper commands.<br>
 <br>
-<strong>Camera Calibration and Image Preprocessing</strong>strong><br>
+<strong>Camera Calibration and Image Preprocessing</strong><br>
 <br>
 Supports multiple resolutions and cropping for optimal AI inference.<br>
 Converts coordinates between camera, YOLO, and robot coordinate systems.<br>
@@ -98,12 +99,12 @@ Logs AI model responses and robot actions for debugging and analysis.<br>
 This system enables a highly interactive, intelligent, and autonomous robot capable of understanding and acting on complex multimodal commands in real-world environments.<br>
 <br>
 <h1>Initialization and Setup</h1><br>
-Imports a wide range of libraries for image processing (cv2, PIL), speech recognition (speech_recognition, pyttsx3), networking (socket), AI inference (ultralytics.YOLO, Bakllava LLM), and custom hardware control.<br>
+Imports a wide range of libraries for image processing (cv2, PIL), speech recognition (speech_recognition, pyttsx3), networking (socket), AI inference (ultralytics YOLO, Bakllava LLM), and custom hardware control.<br>
 Sets up camera and image resolution constants for different AI models (Bakllava, YOLO, ROS).<br>
 Initializes the robot&rsquo;s TCP/IP socket connection via a custom MycobotServer class for sending/receiving joint angles, coordinates, and gripper commands.<br>
 <h2>Vision Modules</h2><br>
-<strong>YOLOv8 Object Detection:</strong><br>
-The YoloInferencer class loads a YOLOv8 model and provides a predict method to detect objects (e.g., fork, banana) in camera frames, returning bounding boxes and confidence scores.<br>
+<strong>YOLO Object Detection:</strong><br>
+The YoloInferencer class loads a YOLO model and provides a predict method to detect objects (e.g., fork, banana) in camera frames, returning bounding boxes and confidence scores.<br>
 <br>
 <strong>Face Mesh Detection:</strong><br>
 The FaceMeshDetector class uses MediaPipe to detect facial landmarks, enabling calculation of the distance to a human face using pixel geometry and known anthropometric distances (e.g., interpupillary distance).<br>
@@ -115,7 +116,7 @@ The scene image is processed and sent (as base64) to a Bakllava multimodal LLM v
 <br>
 <strong>Cleanup Trigger and Object Localization</strong><br>
 <br>
-If Bakllava&rsquo;s response indicates the scene is messy, the system activates YOLOv8 to locate target objects for cleanup.<br>
+If Bakllava&rsquo;s response indicates the scene is messy, the system activates YOLO to locate target objects for cleanup.<br>
 Calculates the 3D position and distance to the object using bounding box size and camera calibration, then translates these to robot coordinates.<br>
 <br>
 <strong>Robot Control and Manipulation</strong><br>
@@ -140,5 +141,5 @@ Continuously refines robot movement based on visual feedback and error correctio
 <strong>Extensible Design:</strong><br>
 Modular classes for detection, inference, and robot control allow for easy upgrades or task changes.<br>
 <strong>Summary:</strong><br>
-This code enables a 6-DOF robot to autonomously detect human presence, understand spoken commands, assess environmental cleanliness using a multimodal LLM, locate objects with YOLOv8, and perform cleanup actions&mdash;all with real-time feedback and robust error handling.<br>
+This code enables a 6-DOF robot to autonomously detect human presence, understand spoken commands, assess environmental cleanliness using a multimodal LLM, locate objects with YOLO, and perform cleanup actions&mdash;all with real-time feedback and robust error handling.<br>
 <br>
