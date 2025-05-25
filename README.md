@@ -34,7 +34,6 @@ This project exemplifies the integration of AI, robotics, and user-centric desig
 This code is for a elephant robotics AI robot with 6 degrees of freedom that utilizes speech recognition combined with a multimodal transformer-based large language model, called bakllava.
 <br>
 <h2>Feature List: Elephant Robotics AI Robot (6-DOF) with Multimodal AI and Speech Control</h2><br>
-<br>
 <strong>6 Degrees of Freedom Robotic Arm</strong><br>
 Enables complex manipulation and precise movement in 3D space.<br>
 Utilizes the ROS2 MoveIt motion planning framework with collision detection and and avoidance visualized in RViz.<br>
@@ -101,11 +100,12 @@ This system enables a highly interactive, intelligent, and autonomous robot capa
 Imports a wide range of libraries for image processing (cv2, PIL), speech recognition (speech_recognition, pyttsx3), networking (socket), AI inference (ultralytics YOLO, Bakllava LLM), and custom hardware control.<br>
 Sets up camera and image resolution constants for different AI models (Bakllava, YOLO, ROS).<br>
 Initializes the robot&rsquo;s TCP/IP socket connection via a custom MycobotServer class for sending/receiving joint angles, coordinates, and gripper commands.<br>
-<h2>Vision Modules</h2><br>
-<strong>YOLO Object Detection:</strong><br>
+<strong>Vision Modules</strong><br>
+<br>
+<strong>YOLO Object Detection</strong><br>
 The YoloInferencer class loads a YOLO model and provides a predict method to detect objects (e.g., fork, banana) in camera frames, returning bounding boxes and confidence scores.<br>
 <br>
-<strong>Face Mesh Detection:</strong><br>
+<strong>Face Mesh Detection</strong><br>
 The FaceMeshDetector class uses MediaPipe to detect facial landmarks, enabling calculation of the distance to a human face using pixel geometry and known anthropometric distances (e.g., interpupillary distance).<br>
 <br>
 <strong>Speech and Multimodal AI</strong><br>
