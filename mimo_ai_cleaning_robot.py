@@ -1,7 +1,7 @@
 
 # MIT License
 
-# Copyright (c) [2025] [Emanuel Bierschnedier]
+# Copyright (c) [2025] [Emanuel Bierschneider]
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -990,4 +990,5 @@ if __name__ == "__main__":
                         temp_y = detect_center_y
                         temp_z = size_distance_target
                     frame_cnt += 1
+
 
