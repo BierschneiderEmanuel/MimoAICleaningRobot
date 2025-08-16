@@ -28,7 +28,7 @@ import math
 import os
 import struct
 import socket
-#speach
+#speech
 import speech_recognition as sr
 import pyttsx3
 from base64 import b64decode
@@ -990,3 +990,4 @@ if __name__ == "__main__":
                         temp_y = detect_center_y
                         temp_z = size_distance_target
                     frame_cnt += 1
+
